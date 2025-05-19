@@ -16,7 +16,7 @@ export PATH
 # PLAIN='\033[0m'
 
 sh_ver="100.0.4.2"
-github="raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master"
+github="github.com/ht-liu/Linux-NetSpeed/blob/master"
 
 imgurl=""
 headurl=""
