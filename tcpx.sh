@@ -16,7 +16,7 @@ export PATH
 # PLAIN='\033[0m'
 
 sh_ver="100.0.4.5"
-github="raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master"
+github="github.com/ht-liu/Linux-NetSpeed/blob/master"
 
 imgurl=""
 headurl=""
@@ -569,7 +569,7 @@ check_github() {
   }
 
   # 检测所有域名的可访问性
-  check_domain "https://raw.githubusercontent.com"
+  check_domain "https://github.com"
   check_domain "https://api.github.com"
   check_domain "https://github.com"
 
@@ -1355,8 +1355,8 @@ startlotserver() {
     apt-get install ethtool -y
   fi
   #bash <(wget -qO- https://git.io/lotServerInstall.sh) install
-  #echo | bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/1265578519/lotServer/main/lotServerInstall.sh) install
-  echo | bash <(wget --no-check-certificate -qO- https://raw.githubusercontent.com/fei5seven/lotServer/master/lotServerInstall.sh) install
+  #echo | bash <(wget --no-check-certificate -qO- https://github.com/1265578519/lotServer/main/lotServerInstall.sh) install
+  echo | bash <(wget --no-check-certificate -qO- https://github.com/fei5seven/lotServer/master/lotServerInstall.sh) install
   sed -i '/advinacc/d' /appex/etc/config
   sed -i '/maxmode/d' /appex/etc/config
   echo -e "advinacc=\"1\"
@@ -1445,7 +1445,7 @@ remove_bbr_lotserver() {
   rm -rf bbrmod
 
   if [[ -e /appex/bin/lotServer.sh ]]; then
-    echo | bash <(wget -qO- https://raw.githubusercontent.com/fei5seven/lotServer/master/lotServerInstall.sh) uninstall
+    echo | bash <(wget -qO- https://github.com/fei5seven/lotServer/master/lotServerInstall.sh) uninstall
   fi
   clear
   # echo -e "${Info}:清除bbr/lotserver加速完成。"
@@ -1522,7 +1522,7 @@ remove_all() {
   sed -i '/net.ipv4.tcp_timestamps/d' /etc/sysctl.conf
   sed -i '/net.ipv4.tcp_max_orphans/d' /etc/sysctl.conf
   if [[ -e /appex/bin/lotServer.sh ]]; then
-    bash <(wget -qO- https://raw.githubusercontent.com/fei5seven/lotServer/master/lotServerInstall.sh) uninstall
+    bash <(wget -qO- https://github.com/fei5seven/lotServer/master/lotServerInstall.sh) uninstall
   fi
   clear
   echo -e "${Info}:清除加速完成。"
@@ -1545,7 +1545,7 @@ optimizing_ddcc() {
 Update_Shell() {
   local shell_file
   shell_file="$(readlink -f "$0")"
-  local shell_url="https://raw.githubusercontent.com/ylx2016/Linux-NetSpeed/master/tcpx.sh"
+  local shell_url="https://github.com/ylx2016/Linux-NetSpeed/master/tcpx.sh"
 
   # 下载最新版本的脚本
   wget -O "/tmp/tcpx.sh" "$shell_url" &>/dev/null
@@ -1596,7 +1596,7 @@ gotodd() {
 gotoipcheck() {
   clear
   sleep 1.5
-  bash <(wget -qO- https://raw.githubusercontent.com/xykt/IPQuality/main/ip.sh)
+  bash <(wget -qO- https://github.com/xykt/IPQuality/main/ip.sh)
   #bash <(wget -qO- https://IP.Check.Place)
 }
 
